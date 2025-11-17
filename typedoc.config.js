@@ -7,7 +7,7 @@ export default {
   readme: 'README.md',
   theme: 'typedoc-github-theme',
   plugin: ['typedoc-github-theme'],
-  name: '@torian12321/js-library-template',
+  name: '@torian12321/react-components-library-template',
   pretty: true,
   excludePrivate: true,
   excludeProtected: true,

@@ -1,6 +1,6 @@
 {
-  "name": "@torian12321/js-library-template",
-  "version": "0.0.3-alpha.4",
+  "name": "@torian12321/react-components-library-template",
+  "version": "0.0.1",
   "type": "module",
   "prettier": "@torian12321/prettier-config",
   "scripts": {
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/torian12321/js-library-template.git"
+    "url": "git+https://github.com/torian12321/react-components-library-template.git"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/js-library-template.js",
-      "require": "./dist/js-library-template.cjs"
+      "import": "./dist/react-components-library-template.js",
+      "require": "./dist/react-components-library-template.cjs"
     },
     "./is": {
       "types": "./dist/typeCheckers.d.ts",
@@ -32,16 +32,28 @@
       "require": "./dist/typeCheckers.cjs"
     }
   },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
     "@torian12321/eslint-config": "0.0.11",
     "@torian12321/prettier-config": "0.0.4",
     "@torian12321/typescript-config": "0.0.5",
     "@types/node": "^24.10.0",
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.1.0",
     "@vitest/coverage-v8": "^4.0.8",
     "@vitest/ui": "^4.0.8",
     "eslint": "^9.39.1",
     "globals": "^16.5.0",
+    "jsdom": "^27.1.0",
     "prettier": "^3.6.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "rollup-plugin-visualizer": "^6.0.5",
     "typedoc": "^0.28.14",
     "typedoc-github-theme": "^0.3.1",
