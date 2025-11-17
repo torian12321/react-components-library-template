@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 
+import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 import dts from 'vite-plugin-dts';
 import { defineConfig } from 'vitest/config';
@@ -8,11 +9,22 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      name: '@torian12321/js-library-template',
+      name: '@torian12321/react-components-library-template',
       formats: ['es', 'cjs'],
       entry: {
-        'js-library-template': resolve(__dirname, 'src/index.ts'),
-        is: resolve(__dirname, 'src/is/index.ts'),
+        'react-components-library-template': resolve(__dirname, 'src/index.ts'),
+        components: resolve(__dirname, 'src/components/index.ts'),
+        layout: resolve(__dirname, 'src/layout/index.ts'),
+      },
+    },
+    rollupOptions: {
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        globals: {
+          react: 'React',
+          'react-dom': 'ReactDOM',
+          'react/jsx-runtime': 'react/jsx-runtime',
+        },
       },
     },
   },
@@ -20,6 +32,7 @@ export default defineConfig({
     alias: [{ find: 'src', replacement: resolve(__dirname, 'src') }],
   },
   plugins: [
+    react(),
     dts({
       insertTypesEntry: true,
       exclude: [
@@ -37,6 +50,7 @@ export default defineConfig({
     }),
   ],
   test: {
+    environment: 'jsdom',
     setupFiles: ['./src/vitest.setup.ts'],
     coverage: {
       enabled: true,

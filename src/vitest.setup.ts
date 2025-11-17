@@ -1,4 +1,7 @@
+import { cleanup } from '@testing-library/react';
 import { afterAll, afterEach, beforeAll, beforeEach } from 'vitest';
+
+import '@testing-library/jest-dom/vitest';
 
 beforeAll(() => {
   // Add your global beforeAll logics
@@ -13,5 +16,7 @@ afterAll(() => {
 });
 
 afterEach(() => {
+  // Cleanup DOM after each test
+  cleanup();
   // Add your global afterEach logics
 });
