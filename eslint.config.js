@@ -1,10 +1,8 @@
-import { baseConfig } from '@torian12321/eslint-config';
+import { reactConfig } from '@torian12321/eslint-config';
 
 export default [
-  { ignores: ['docs', 'typedoc.config.js'] },
-  ...baseConfig,
+  ...reactConfig,
   {
-    files: ['**/*.ts'],
     languageOptions: {
       parserOptions: {
         project: 'tsconfig.json',

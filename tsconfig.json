@@ -1,5 +1,5 @@
 {
-  "extends": "@torian12321/typescript-config/vite",
+  "extends": "@torian12321/typescript-config/vite-react",
   "include": [".", "src"],
   "exclude": ["dist", "examples", "docs"],
   "compilerOptions": {
