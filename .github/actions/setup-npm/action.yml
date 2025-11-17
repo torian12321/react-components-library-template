@@ -9,11 +9,11 @@ inputs:
   registry-url:
     description: 'NPM registry URL (e.g., https://npm.pkg.github.com)'
     required: false
-    default: ''
+    default: 'https://npm.pkg.github.com'
   scope:
     description: 'NPM scope (e.g., @torian12321)'
     required: false
-    default: ''
+    default: '@torian12321'
   github-token:
     description: 'GitHub token for authentication (defaults to GITHUB_TOKEN)'
     required: false
@@ -28,6 +28,7 @@ runs:
         node-version: ${{ inputs.node-version }}
         registry-url: ${{ inputs.registry-url }}
         scope: ${{ inputs.scope }}
+        cache: 'npm'
 
     - name: 🔑 Prepare .npmrc from example
       run: |

@@ -27,14 +27,9 @@ jobs:
 
       - name: 🔧 Setup NPM and Install Dependencies
         uses: ./.github/actions/setup-npm
-        with:
-          node-version: '22'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: '@torian12321'
-          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 📝 Build documentation
-        run: npm run build:docs
+      - name: 📝 Build Storybook
+        run: npm run build:storybook
 
       - name: 📦 Setup Pages
         uses: actions/configure-pages@v4
@@ -42,7 +37,7 @@ jobs:
       - name: 📦 Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs/typedoc'
+          path: './storybook-static'
 
       - name: 🚀 Deploy to GitHub Pages
         id: deployment

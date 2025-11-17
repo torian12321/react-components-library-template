@@ -13,7 +13,8 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       entry: {
         'react-components-library-template': resolve(__dirname, 'src/index.ts'),
-        is: resolve(__dirname, 'src/is/index.ts'),
+        components: resolve(__dirname, 'src/components/index.ts'),
+        layout: resolve(__dirname, 'src/layout/index.ts'),
       },
     },
     rollupOptions: {

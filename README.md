@@ -5,7 +5,7 @@
   </a>
 </p>
 
-## JS Library Template Usage
+## React Components Library Template Usage
 
 Template for js-libraries.
 
@@ -21,20 +21,15 @@ Create your first functions following:
 
 Remove example functions `greet.ts`, `isBoolean.ts`, `isString.ts` and their respective tests files.
 
-Remove [`JS Library Template Usage`](#react-components-library-template-usage) block from documentation
+Remove [`React Components Library Usage`](#react-components-library-template-usage) block from documentation
+
+# Usage
 
 # Usage
 
 ## Environment Setup
 
-To the root of your project, add `.npmrc` file with the given content:
-
-```sh
-# .npmrc
-#
-# Custom registry for @torian12321 packages.
-@torian12321:registry=https://npm.pkg.github.com
-```
+1. Generate a `.npmrc` file based on the provided `.npmrc.example`. [Details](./docs/NPMRC_TOKEN.md)
 
 ## Installation
 
