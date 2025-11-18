@@ -3,9 +3,7 @@ name: CI
 on:
   pull_request:
     branches: [master]
-  push:
-    branches: [master]
-  workflow_dispatch: # Allows manual triggering from GitHub UI
+  workflow_call: # Allows this workflow to be called from other workflows
 
 jobs:
   validate:

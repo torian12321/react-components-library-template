@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
+  workflow_dispatch: # Allows manual triggering from GitHub UI
 
 permissions:
   contents: read
@@ -16,7 +16,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  validate:
+    uses: ./.github/workflows/CI.yml
+
   deploy:
+    needs: validate
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
