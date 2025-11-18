@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { useState } from 'react';
 
-import { Header } from 'src/layout/Header/Header';
+import { Header } from 'src/layout';
 
 import type { User } from './Page.types';
 

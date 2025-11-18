@@ -25,11 +25,6 @@
     "dist/**/*"
   ],
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/react-components-library-template.js",
-      "require": "./dist/react-components-library-template.cjs"
-    },
     "./components": {
       "types": "./dist/components.d.ts",
       "import": "./dist/components.js",
@@ -39,6 +34,11 @@
       "types": "./dist/layout.d.ts",
       "import": "./dist/layout.js",
       "require": "./dist/layout.cjs"
+    },
+    "./views": {
+      "types": "./dist/views.d.ts",
+      "import": "./dist/views.js",
+      "require": "./dist/views.cjs"
     }
   },
   "peerDependencies": {
