@@ -25,8 +25,6 @@ Remove [`React Components Library Usage`](#react-components-library-template-usa
 
 # Usage
 
-# Usage
-
 ## Environment Setup
 
 1. Generate a `.npmrc` file based on the provided `.npmrc.example`. [Details](./docs/NPMRC_TOKEN.md)
