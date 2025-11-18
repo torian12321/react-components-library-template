@@ -1,10 +1,12 @@
 documentation:
   - changed-files:
-      - any-glob-to-any-file: ['**/*.md', '**/*.mdx', './docs/**/*']
-
-utils:
-  - changed-files:
-      - any-glob-to-any-file: ['./src/**/*']
+      - any-glob-to-any-file:
+          [
+            '**/*.{md,mdx}',
+            './docs/**/*',
+            '**/*.story.{ts,tsx}',
+            '**/*.stories.{ts,tsx}',
+          ]
 
 test 🔬:
   - changed-files:
@@ -13,3 +15,15 @@ test 🔬:
 github actions:
   - changed-files:
       - any-glob-to-any-file: ['.github/**/*']
+
+components:
+  - changed-files:
+      - any-glob-to-any-file: ['./src/components/**/*']
+
+layout:
+  - changed-files:
+      - any-glob-to-any-file: ['./src/layout/**/*']
+
+views:
+  - changed-files:
+      - any-glob-to-any-file: ['./src/views/**/*']
