@@ -1,6 +1,6 @@
-import type { Preview } from '@storybook/react-vite';
+import type { Parameters, Preview } from '@storybook/react-vite';
 
-const preview: Preview = {
+export const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
@@ -11,4 +11,19 @@ const preview: Preview = {
   },
 };
 
-export default preview;
+export const parameters: Parameters = {
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: [
+        'Documentation',
+        'Components',
+        ['Introduction', '*'],
+        'Layout',
+        'Views',
+        'Contexts',
+      ],
+      locales: 'en-US',
+    },
+  },
+};
